@@ -11,8 +11,14 @@
  * echo("test", 1); // "test"
  */
 export function echo(word, n) {
-  // TODO
+  let result = "";
+    for (let i = 0; i < n; i++) {
+      result += word;
+  }
+  return result;
 }
+  // TODO
+
 
 /**
  * @param {string} word - The word to repeat.
@@ -27,7 +33,10 @@ export function echo(word, n) {
  * echoWithSpace("test", 1); // "test"
  */
 export function echoWithSpace(word, n) {
-  // TODO
+  let result = "";
+  let count = 0;
+    for (let i = 0; i < n; i++) {
+    }
 }
 
 /**
@@ -42,7 +51,12 @@ export function echoWithSpace(word, n) {
  * sumTo(100); // 5050
  */
 export function sumTo(n) {
-  // TODO
+  let result = 0;
+  for (let i = 1; i <= n; i++) {
+    result += i;
+  }
+  return result;
+  
 }
 
 /**
@@ -58,7 +72,12 @@ export function sumTo(n) {
  * sumFromTo(2, 2); // 2
  */
 export function sumFromTo(a, z) {
-  // TODO
+  let result = 0
+  for (let i = a; i <= z; i++) {
+    result += i;
+  }
+  return result;
+
 }
 
 /**
@@ -73,6 +92,9 @@ export function sumFromTo(a, z) {
  * countdown(5); // logs 5, 4, 3, 2, 1
  */
 export function countdown(n) {
+  for (let i = n; i >= 1; i--) {
+    console.log(i);
+  }
   // TODO
 }
 
