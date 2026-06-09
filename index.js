@@ -139,7 +139,7 @@ export function getGrowthTime(start, target) {
   if (start <= 0) {
     return undefined;
   }
-  
+
   let size = start;
   let minutes = 0;
   
@@ -168,8 +168,21 @@ return minutes;
  * getCompoundTime(30000, 0.04, 50000); // 14
  */
 export function getCompoundTime(start, rate, target) {
-  // TODO
+  if (start <= 0 || rate <= 0) {
+    return undefined;
+  }
+  
+  let amount = start;
+  let years = 0;
+  
+  while(amount < target) {
+    amount = amount * (1 + rate);
+    years = years + 1;
 }
+
+return years;
+}
+
 
 /**
  * An empty bucket sits some distance away from a water faucet.
