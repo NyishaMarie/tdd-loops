@@ -95,7 +95,7 @@ export function countdown(n) {
   for (let i = n; i >= 1; i--) {
     console.log(i);
   }
-  
+
 }
 
 /**
@@ -136,7 +136,19 @@ export function sumOddsToN(n) {
  * getGrowthTime(5, 78); // 80
  */
 export function getGrowthTime(start, target) {
+  if (start <= 0) {
+    return undefined;
+  }
+  
+  let size = start;
+  let minutes = 0;
+  
+  while(size<target) {
+    size = size * 2;
+    minutes = minutes + 20;
   // TODO
+}
+return minutes;
 }
 
 /**
