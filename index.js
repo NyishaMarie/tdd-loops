@@ -207,8 +207,23 @@ return years;
  * moveWater(7, 3); // 1
  */
 export function moveWater(colander, bucket) {
-  // TODO
+  if (colander <= 0) {
+    return undefined;
+  }
+  let total = 0; 
+  let colanderCups = colander; 
+  let trips = 0; 
+
+while (total < bucket) { 
+  total = total + colanderCups; 
+  trips = trips + 1; 
+if (colanderCups > 1) { 
+  colanderCups = colanderCups - 1; 
 }
+}
+return trips; 
+}
+
 
 /**
  * This is a classic interview question! :)
