@@ -95,7 +95,7 @@ export function countdown(n) {
   for (let i = n; i >= 1; i--) {
     console.log(i);
   }
-  // TODO
+  
 }
 
 /**
@@ -110,7 +110,13 @@ export function countdown(n) {
  * sumOddsToN(1); // 1
  */
 export function sumOddsToN(n) {
-  // TODO
+  let result = 0;
+  for (let i = 1; i <= n; i++) {
+    if (i % 2 === 1) {
+      result += 1;
+    }
+  }
+  return result;
 }
 
 /**
