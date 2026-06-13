@@ -12,6 +12,7 @@
  */
 export function echo(word, n) {
   let result = "";
+
     for (let i = 0; i < n; i++) {
       result += word;
   }
@@ -33,10 +34,17 @@ export function echo(word, n) {
  * echoWithSpace("test", 1); // "test"
  */
 export function echoWithSpace(word, n) {
-  let result = "";
-  let count = 0;
-    for (let i = 0; i < n; i++) {
-    }
+
+let result = "";
+
+for(let i=0; i < n; i++) {
+if(result === "") {
+result += word;
+} else {
+result = result + " " + word;
+}
+ }
+return result;
 }
 
 /**
@@ -113,7 +121,7 @@ export function sumOddsToN(n) {
   let result = 0;
   for (let i = 1; i <= n; i++) {
     if (i % 2 === 1) {
-      result += 1;
+      result += i;
     }
   }
   return result;
